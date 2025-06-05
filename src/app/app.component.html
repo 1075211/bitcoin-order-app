@@ -1,3 +1,33 @@
+<mat-toolbar color="primary" class="green-toolbar" role="banner">
+  <mat-toolbar-row class="toolbar-content">
+    <!-- Logo & Title -->
+    <div class="brand" [routerLink]="['']" style="cursor: pointer;">
+      <img src="assets/pixel.gif" alt="Pixel Logo" class="pixel" />
+      <span class="app-title">Bitcoin Changer v1.2</span>
+    </div>
+
+    <!-- Spacer pushes right content to the end -->
+    <span class="spacer"></span>
+
+    <!-- Navigation Buttons -->
+    <nav class="nav-buttons" aria-label="Main actions">
+      <button mat-raised-button color="primary" (click)="buyBtc()">Buy</button>
+      <button mat-raised-button color="accent" (click)="sellBtc()">Sell</button>
+      <button mat-stroked-button color="warn" (click)="viewHistory()">History</button>
+      <button mat-icon-button aria-label="Help" (click)="showHelp()">
+        <mat-icon>help_outline</mat-icon>
+      </button>
+      <button mat-icon-button aria-label="Language" (click)="toggleLanguage()">
+        <mat-icon>translate</mat-icon>
+      </button>
+    </nav>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- Page Router -->
+<main role="main">
+  <router-outlet></router-outlet>
+</main>
 <mat-toolbar class="green">
     <mat-toolbar-row [style.backgroundColor]="'#81DF95'">
         <img [routerLink]="['']" src = "assets/pixel.gif" alt = "pixelImg" class="pixel">
